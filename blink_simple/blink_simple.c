@@ -1,13 +1,9 @@
-/**
- * Copyright (c) 2020 Raspberry Pi (Trading) Ltd.
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
+/* */
 
 #include "pico/stdlib.h"
 
 #ifndef LED_DELAY_MS
-#define LED_DELAY_MS 250
+#define LED_DELAY_MS 500
 #endif
 
 // Initialize the GPIO for the LED
@@ -34,6 +30,6 @@ int main() {
         pico_set_led(true);
         sleep_ms(LED_DELAY_MS);
         pico_set_led(false);
-        sleep_ms(LED_DELAY_MS);
+        sleep_ms(LED_DELAY_MS * 2);
     }
 }
